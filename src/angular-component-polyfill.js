@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  if ( angular && (angular.version.major === 1 && angular.version.minor < 5) ) {
+  if ( angular && (angular.version.major === 1 && angular.version.minor < 5 && angular.version.minor >= 3) ) {
     const ng = angular.module;
 
     angular.module = module;
