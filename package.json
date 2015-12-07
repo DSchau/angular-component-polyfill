@@ -1,0 +1,32 @@
+{
+  "name": "angular-component-polyfill",
+  "version": "0.0.1",
+  "description": "A .component polyfill for <1.5.x angular applications",
+  "main": "lib/angular-component-polyfill.js",
+  "scripts": {
+    "prepublish": "babel src --out-dir lib && ng-annotate lib/angular-component-polyfill.js --add -o lib/angular-component-polyfill.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSchau/angular-component-polyfill.git"
+  },
+  "keywords": [
+    "angular",
+    "polyfill",
+    "component"
+  ],
+  "author": "Dustin Schau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DSchau/angular-component-polyfill/issues"
+  },
+  "homepage": "https://github.com/DSchau/angular-component-polyfill#readme",
+  "devDependencies": {
+    "babel-cli": "^6.3.15",
+    "babel-preset-es2015": "^6.3.13",
+    "ng-annotate": "^1.0.2"
+  },
+  "dependencies": {
+    "angular": "<1.5.0"
+  }
+}
