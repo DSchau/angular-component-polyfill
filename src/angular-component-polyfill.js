@@ -24,9 +24,8 @@
                   $attrs: tAttrs
                 });
               };
-            } else {
-              return fn;
             }
+            return fn;
           };
 
           return {
@@ -52,8 +51,5 @@
         return hijacked.directive(name, factory);
       }
     }
-
-
   }
 })();
-
