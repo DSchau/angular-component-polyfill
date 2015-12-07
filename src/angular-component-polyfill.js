@@ -1,6 +1,7 @@
 'use strict';
-(() => {
-  if ( angular && (angular.version.major === 1 && angular.version.minor < 5 && angular.version.minor >= 3) ) {
+((angular) => {
+  const { major, minor } = angular.version;
+  if ( major === 1 && (minor < 5 && minor >= 3) ) {
     const ng = angular.module;
 
     angular.module = module;
@@ -13,7 +14,6 @@
       return hijacked;
 
       function component(name, options) {
-
         const factory = ($injector) => {
           'ngInject';
           const makeInjectable = (fn) => {
@@ -52,4 +52,4 @@
       }
     }
   }
-})();
+})(window.angular||{});
