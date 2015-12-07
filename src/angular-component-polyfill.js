@@ -19,7 +19,7 @@
           const makeInjectable = (fn) => {
             if (angular.isFunction(fn)) {
               return function (tElement, tAttrs) {
-                return $injector.invoke(fn, window, {
+                return $injector.invoke(fn, this, {
                   $element: tElement,
                   $attrs: tAttrs
                 });
@@ -55,5 +55,5 @@
 
 
   }
-})(window);
+})();
 
